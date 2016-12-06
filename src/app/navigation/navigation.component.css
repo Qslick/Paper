@@ -1,0 +1,161 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.auth {
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  float: right;
+  display: block;
+  color: #111;
+  text-align: center;
+  padding: 14px 16px;
+  margin: 5px;
+  text-decoration: none;
+}
+
+input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+
+.loginBtn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+.dropdownAuth> li > a  {
+
+  line-height: normal; /* or just choose another value: e.g. 1.5; */
+  vertical-align: middle;
+  display: inline-block;
+
+}
+
+.nav_area_top ul.nav_root_wrap > li {
+  line-height: 36px;
+}
+
+#customBtn {
+  display: inline-block;
+  background: white;
+  color: #444;
+  width: 190px;
+  border-radius: 5px;
+  border: thin solid #888;
+  box-shadow: 1px 1px 1px grey;
+  white-space: nowrap;
+}
+#customBtn:hover {
+  cursor: pointer;
+}
+span.label {
+  font-family: serif;
+  font-weight: normal;
+}
+span.icon {
+  background: url('/src/assets/images/Google_icon.png') transparent 5px 50% no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+  height: 42px;
+}
+.googleBtn {
+  margin: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 42px;
+  padding-right: 42px;
+  font-size: 14px;
+  font-weight: bold;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: 'Roboto', sans-serif;
+
+  display: inline-block;
+  background: #D84B37;
+  color: #ffffff;
+  width: 190px;
+  border-radius: 5px;
+  border: thin solid #888;
+  box-shadow: 1px 1px 1px grey;
+  white-space: nowrap;
+}
+
+.facebookBtn {
+  margin: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 42px;
+  padding-right: 42px;
+  font-size: 14px;
+  font-weight: bold;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: 'Roboto', sans-serif;
+
+  display: inline-block;
+  background: #3B5998;
+  color: #ffffff;
+  width: 190px;
+  border-radius: 5px;
+  border: thin solid #888;
+  box-shadow: 1px 1px 1px grey;
+  white-space: nowrap;
+}
+/*input[type=text] {*/
+/*float: right;*/
+/*margin: 15px;*/
+/*width: 130px;*/
+/*box-sizing: border-box;*/
+/*border: 2px solid #ccc;*/
+/*border-radius: 4px;*/
+/*font-size: 16px;*/
+/*background-color: white;*/
+/*background-image: url('searchicon.png');*/
+/*background-position: 10px 10px;*/
+/*background-repeat: no-repeat;*/
+/*padding: 12px 20px 12px 40px;*/
+/*-webkit-transition: width 0.4s ease-in-out;*/
+/*transition: width 0.4s ease-in-out;*/
+/*}*/
+
+/*input[type=text]:focus {*/
+/*width: 30%;*/
+/*}*/
