@@ -12,7 +12,10 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { PaperPreviewComponent } from './paper-preview/paper-preview.component';
 import { ProfileComponent } from './profile/profile.component';
-import {routes} from "./app.router";
+import {routes} from "./routing/app.router";
+import { PageNotFounComponent } from './page-not-foun/page-not-foun.component';
+import {AuthGuard} from "./auth-guard";
+
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyC3XA_yH8ONbOBelago3JV8DEIAGZbk490',
@@ -32,7 +35,8 @@ const myFirebaseAuthConfig = {
     NavigationComponent,
     HomeComponent,
     PaperPreviewComponent,
-    ProfileComponent
+    ProfileComponent,
+    PageNotFounComponent
   ],
   imports: [
     AlertModule,
@@ -42,6 +46,10 @@ const myFirebaseAuthConfig = {
     FormsModule,
     HttpModule,
     routes
+  ],
+  providers: [
+    AuthGuard,
+    // CanActivateViaAuthGuard
   ],
   // provider: AuthProviders.Google,
   // method: AuthMethods.Popup,

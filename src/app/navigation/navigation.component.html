@@ -31,6 +31,7 @@
             <div *ngIf="isAuthenticated == true">
             <ul class="nav navbar-nav navbar-right">
               <img class="profilePic" src="{{profileImageUrl}}">
+              <li><a routerLink="profile" >Profile</a></li>
               <li><a href="#" (click)="logout()">Log Out<span class="sr-only">(current)</span></a></li>
             </ul>
             </div>

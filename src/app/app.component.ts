@@ -10,7 +10,6 @@ import { AngularFire, FirebaseListObservable, AuthProviders, AuthMethods} from '
   // directives: [NavigationComponent]
 })
 export class AppComponent {
-  isAuthenticated: boolean;
 
   constructor() {
 
