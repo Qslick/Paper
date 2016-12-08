@@ -6,8 +6,8 @@ import { AngularFire, FirebaseListObservable, AuthProviders, AuthMethods} from '
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css'],
-  provider: AuthProviders.Google,
-  method: AuthMethods.Popup
+  // provider: AuthProviders.Google,
+  // method: AuthMethods.Popup
 
 })
 export class NavigationComponent implements OnInit {
@@ -18,7 +18,9 @@ users: FirebaseListObservable<any[]>;
   uid;
   name;
   email;
-  profileUrl;
+  profileImageUrl;
+
+  isAuthenticated:boolean;
 
   constructor(public af: AngularFire) {
     // this.users = af.database.list('/users/');
@@ -29,23 +31,15 @@ users: FirebaseListObservable<any[]>;
         this.uid = this.user.uid;
         this.name = this.user.google.displayName;
         this.email = this.user.google.email;
-        this.profileUrl = this.user.google.photoURL;
-
+        this.profileImageUrl = this.user.google.photoURL;
+        this.isAuthenticated = true;
         this.dbInit();
-
-        // const userData = af.database.object('/users/'+this.uid);
-        // // userData.set({name: this.name});
-        //
-        // userData.set({
-        //   email: this.email,
-        //   name: this.name,
-        //   photoUrl: this.profileUrl
-        // });
       }
       else {
         this.user = null;
         this.uid=0;
         this.name="";
+        this.isAuthenticated = false;
       }
     });
   }
@@ -57,16 +51,11 @@ users: FirebaseListObservable<any[]>;
      userData.set({
        name: this.name,
        email: this.email,
-       photoUrl: this.profileUrl
+       photoUrl: this.profileImageUrl
      });
    }
 
 
-//   firebase.database().ref('users/' + userId).set({
-//   username: name,
-//   email: email,
-//   profile_picture : imageUrl
-// });
 
   googleLogin(){
     console.log("Button Clicked");

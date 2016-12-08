@@ -11,6 +11,8 @@ import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { PaperPreviewComponent } from './paper-preview/paper-preview.component';
+import { ProfileComponent } from './profile/profile.component';
+import {routes} from "./app.router";
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyC3XA_yH8ONbOBelago3JV8DEIAGZbk490',
@@ -29,7 +31,8 @@ const myFirebaseAuthConfig = {
     AppComponent,
     NavigationComponent,
     HomeComponent,
-    PaperPreviewComponent
+    PaperPreviewComponent,
+    ProfileComponent
   ],
   imports: [
     AlertModule,
@@ -37,7 +40,8 @@ const myFirebaseAuthConfig = {
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig),
     FormsModule,
-    HttpModule
+    HttpModule,
+    routes
   ],
   // provider: AuthProviders.Google,
   // method: AuthMethods.Popup,
